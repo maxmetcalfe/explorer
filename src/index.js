@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom';
 import document from 'global/document';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
-import DateFnsUtils from 'material-ui-pickers/utils/date-fns-utils';
+import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
+import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
+
 
 import './index.css';
 import 'react-virtualized/styles.css';
@@ -25,8 +26,8 @@ if (process.env.NODE_ENV === 'production') {
 ReactDOM.render((
   <MuiThemeProvider theme={Theme}>
     <CssBaseline />
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       <App />
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   </MuiThemeProvider>
 ), document.getElementById('root'));

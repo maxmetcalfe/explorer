@@ -13,8 +13,7 @@ import Modal from '@material-ui/core/Modal';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
-
-import { DateTimePicker } from 'material-ui-pickers';
+import DateTimePicker from '@material-ui/lab/DateTimePicker';
 
 import Timelineworker from '../../timeline';
 

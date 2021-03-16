@@ -11,8 +11,8 @@ import {
   Button,
   Typography,
   FormHelperText,
-  ExpansionPanel,
-  ExpansionPanelSummary,
+  Accordion,
+  AccordionSummary,
   LinearProgress,
   FormControl,
   TextField,
@@ -198,7 +198,7 @@ class DeviceList extends Component {
         onChange={partial(this.props.handleDeviceSelected, device.dongle_id)}
         className={classes.expansion}
       >
-        <ExpansionPanelSummary>
+        <AccordionSummary>
           <Grid container>
             <Grid item xs={10}>
               { this.state.editingDevice === device.dongle_id
@@ -248,7 +248,7 @@ class DeviceList extends Component {
                 </>
               )}
           </Grid>
-        </ExpansionPanelSummary>
+        </AccordionSummary>
       </ExpansionPanel>
     );
   }

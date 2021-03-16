@@ -7,10 +7,10 @@ import {
   withStyles,
   Grid,
   Typography,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-  ExpansionPanelActions,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  AccordionActions,
   Divider,
   Select,
   MenuItem,
@@ -280,7 +280,7 @@ class AnnotationEntry extends PureComponent {
         onChange={this.props.onChange}
         defaultExpanded={this.props.defaultExpanded}
       >
-        <ExpansionPanelSummary
+        <AccordionSummary
           classes={{ content: classes.summaryContent }}
         >
           <Grid container alignItems="center">
@@ -305,7 +305,7 @@ class AnnotationEntry extends PureComponent {
               </Typography>
             </Grid>
           </Grid>
-        </ExpansionPanelSummary>
+        </AccordionSummary>
         { !this.state.saving && <Divider style={{ marginBottom: 4 }} /> }
         { this.state.saving && <LinearProgress /> }
         <ExpansionPanelDetails>
